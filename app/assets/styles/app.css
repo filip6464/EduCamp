@@ -1,3 +1,14 @@
-body {
-    background-color: lightgray;
+html, body, #root, .App {
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }

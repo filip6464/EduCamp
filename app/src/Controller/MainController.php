@@ -9,10 +9,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class MainController extends AbstractController
 {
     /**
-     * @Route("/", name="main")
+     * @Route("/{reactRouting}", name="main", priority="-1", defaults={"reactRouting": null}, requirements={"reactRouting"=".+"})
      */
     public function index()
     {
-        return $this->render('base.html.twig');
+        return $this->render('/home/index.html.twig');
     }
 }
