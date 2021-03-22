@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import {Navbar, Nav, NavbarBrand, NavDropdown, Form, Button, FormControl} from 'react-bootstrap';
-import './Navigation.css';
-import logo from '../images/logo_transparent.svg';
+import './Navigation_ReactBootstrap.css';
+import logo from '../../images/logo_transparent.svg';
 
-class Navigation extends Component {
+class Navigation_ReactBootstrap extends Component {
     render() {
         return (
             <div>
@@ -41,4 +41,4 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;
+export default Navigation_ReactBootstrap;

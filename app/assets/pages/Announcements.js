@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import TitleBox from "../components/TitleBox";
 import PostsContainer from "../components/PostsContainer";
+import TitleBox from "../components/TitleBox";
 
 class Announcements extends Component {
     render() {

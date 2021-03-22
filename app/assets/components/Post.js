@@ -1,29 +1,57 @@
-import React, {Component} from 'react';
-import {Card, Navbar} from "react-bootstrap";
-import './Post.css'
-import post_img_exmaple from "../images/post_image_example.jpg";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import img from './../images/post_image_example.jpg';
 
-class Post extends Component {
-    render() {
-        return (
-            <div className="post">
-                <img
-                    src={post_img_exmaple}
-                    width="auto"
-                    height="150px"
-                    className="d-inline-block align-top"
-                    alt="post example logo"
+const useStyles = makeStyles({
+    root: {
+        marginTop: '0.8rem',
+        marginBottom: '0.8rem',
+        maxWidth: '95%',
+        minWidth: '95%',
+
+    },
+    container:{
+        display: 'flex',
+        flexDirection: 'row',
+
+    },
+    content: {
+        width: '-webkit-fill-available'
+    },
+    media: {
+        width: '28%',
+        height: '150px'
+    },
+});
+
+export default function MediaCard() {
+    const classes = useStyles();
+
+    return (
+        <Card className={classes.root}>
+            <CardActionArea className={classes.container}>
+                <CardMedia
+                    className={classes.media}
+                    image={img}
+                    title="Contemplative Reptile"
                 />
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                        </Card.Text>
-                    </Card.Body>
-            </div>
-        );
-    }
-}
+                <CardContent className={classes.content}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        Multiplying in range 100
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Some example text to show description of the homework.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
 
-export default Post;
+        </Card>
+    );
+}

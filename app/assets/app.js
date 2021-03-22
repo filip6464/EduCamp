@@ -19,36 +19,36 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import Navigation from "./components/Navigation";
 import Homeworks from "./pages/Homeworks";
 import Contact from "./pages/Contact";
 import Announcements from "./pages/Announcements";
 import Login from "./pages/Login";
 import background from "./images/background_image.jpg";
+import Navbar from "./components/navbar"
+import Navigation_ReactBootstrap from "./components/reactBootstrap/Navigation_ReactBootstrap";
+import Footer from "./components/Footer";
 
 
 function App(){
     return (
-          <div className="App container-fluid" style={{ backgroundImage: `url(${background})` }}>
+          <div className="App" style={{ backgroundImage: `url(${background})` }}>
               <Router>
-                  <Navigation />
+                  <Navigation_ReactBootstrap />
+                  <div className="content">
                   <Switch>
-                      <Route path="/" exact component={Home}/>
+                      <Route path="/" exact component={Homeworks}/>
                       <Route path="/homeworks" exact component={Homeworks}/>
                       <Route path="/contact" exact component={Contact}/>
                       <Route path="/announcements" exact component={Announcements}/>
                       <Route path="/login" exact component={Login}/>
                   </Switch>
+                  </div>
+                  <Footer />
               </Router>
           </div>
     );
 }
 
-const Home = () => (
-    <div>
-        <h1>homepage</h1>
-    </div>
-);
 
 ReactDOM.render(<App/>,document.getElementById("root"))
 

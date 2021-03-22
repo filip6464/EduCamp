@@ -1,18 +1,31 @@
 import React, {Component} from 'react';
 import Post from "./Post";
-import './PostsContainer.css'
+import {withStyles} from "@material-ui/styles";
+import {makeStyles, Paper} from "@material-ui/core";
+
+const StyledPaper = withStyles({
+    root: {
+        minWidth: '70%',
+        flexGrow: 1,
+        margin: '5rem' ,
+        padding: '3rem',
+        paddingLeft: '6rem',
+        borderRadius: 74,
+        backgroundColor: '#fff'
+    },
+})(Paper);
 
 class PostsContainer extends Component {
     render() {
         return (
-            <div className="container postsContainer">
+            <StyledPaper>
                 <Post />
                 <Post />
                 <Post />
                 <Post />
                 <Post />
                 <Post />
-            </div>
+            </StyledPaper>
         );
     }
 }
