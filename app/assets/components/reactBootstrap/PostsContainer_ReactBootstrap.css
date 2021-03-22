@@ -1,0 +1,11 @@
+
+
+.postsContainer{
+    justify-self: center;
+    margin: 4.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    border-radius: 74px;
+}

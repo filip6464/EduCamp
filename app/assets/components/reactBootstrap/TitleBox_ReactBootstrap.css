@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.titlebox{
+    margin: 3rem;
+    padding: 1.3rem;
+    font-size: 3.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    border: 3px solid;
+    border-style: dashed;
+    border-color: #8639fb;
+    border-radius: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
+}

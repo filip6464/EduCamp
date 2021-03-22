@@ -22,6 +22,8 @@ Encore
      */
     .addEntry('app', './assets/app.js')
 
+
+
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
 
@@ -55,6 +57,11 @@ Encore
         config.corejs = 3;
     })
 
+    .configureWatchOptions(options => {
+    options.poll = 250;
+    })
+
+
     // enables Sass/SCSS support
     //.enableSassLoader()
 
@@ -72,4 +79,7 @@ Encore
     //.autoProvidejQuery()
 ;
 
+
+// export the final configuration
 module.exports = Encore.getWebpackConfig();
+
