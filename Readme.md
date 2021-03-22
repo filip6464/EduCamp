@@ -1,4 +1,4 @@
-#Plan Sprintów
+# Plan Sprintów
 
 Numer laboratorium | Data | Postęp w projekcie 
 ---| --- | ---
