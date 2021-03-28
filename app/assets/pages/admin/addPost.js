@@ -3,6 +3,7 @@ import TitleBox from "../../components/TitleBox";
 import AdminSideMenu from "../../components/AdminSideMenu";
 import AdminPostContainer from "../../components/AdminPostContainer";
 import {makeStyles} from "@material-ui/core/styles";
+import AddPostForm from "../../components/AddPostForm";
 
 const useStyles = makeStyles({
     root: {
@@ -34,7 +35,7 @@ export default function AddPost() {
                 <TitleBox title='Add Post'/>
                 <div className={classes.root}>
                     <div className={classes.content} component="div" display="flex" flexDirection="column" flexWrap="wrap">
-
+                        <AddPostForm />
                     </div>
                     <div className={classes.menu} component="div" display="flex" flexDirection="column" flexWrap="wrap">
                         <AdminSideMenu />

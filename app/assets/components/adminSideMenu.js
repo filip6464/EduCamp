@@ -7,7 +7,6 @@ import {Link} from "react-router-dom";
 
 const useStyles = makeStyles({
     root: {
-        marginTop: '0rem',
         margin: '1.5rem',
         padding: '1rem'
     },
