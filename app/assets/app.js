@@ -27,13 +27,13 @@ import background from "./images/background_image.jpg";
 import Navbar from "./components/navbar"
 import Navigation_ReactBootstrap from "./components/reactBootstrap/Navigation_ReactBootstrap";
 import Footer from "./components/Footer";
-import Admin from "./pages/Admin";
-import AddPost from "./pages/admin/addPost";
-import ManageAnnouncements from "./pages/admin/manageAnnouncements";
-import ManageHomeworks from "./pages/admin/manageHomeworks";
+import AddPost from "./pages/admin/AddPost";
+import ManageAnnouncements from "./pages/admin/ManageAnnouncements";
+import ManageHomeworks from "./pages/admin/ManageHomeworks";
 
 
 function App(){
+
     return (
           <div className="App" style={{ backgroundImage: `url(${background})` }}>
               <Router>
@@ -45,7 +45,6 @@ function App(){
                       <Route path="/contact" exact component={Contact}/>
                       <Route path="/announcements" exact component={Announcements}/>
                       <Route path="/login" exact component={Login}/>
-                      <Route path="/admin" exact component={ManageHomeworks}/>
                       <Route path="/admin/homeworks" exact component={ManageHomeworks}/>
                       <Route path="/admin/announcements" exact component={ManageAnnouncements}/>
                       <Route path="/admin/addpost" exact component={AddPost}/>
