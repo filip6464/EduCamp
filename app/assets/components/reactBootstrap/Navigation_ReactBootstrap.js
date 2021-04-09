@@ -33,6 +33,9 @@ class Navigation_ReactBootstrap extends Component {
                             <Nav.Item>
                                 <Link to={"/login"}>Login</Link>
                             </Nav.Item>
+                            <Nav.Item>
+                                <Link to={"/admin/homeworks"}>Admin</Link>
+                            </Nav.Item>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
 import TitleBox from "../components/TitleBox";
 import ContactForm from "../components/ContactForm";
-import {Paper} from "@material-ui/core";
+import {Box, Paper} from "@material-ui/core";
+import {Book} from "@material-ui/icons";
+import About from "../components/About";
+import ContactPlate from "../components/ContactPlate";
 
 class Contact extends Component {
     render() {
         return (
             <div>
                 <TitleBox title='Contact'/>
-                <Paper>
-                    <ContactForm />
-                </Paper>
+                <Box component="div" display="flex" flexDirection="row" flexWrap="wrap">
+                    <About />
+                    <ContactPlate />
+                </Box>
             </div>
         );
     }

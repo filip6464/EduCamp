@@ -1,5 +1,6 @@
 html, body, #root, .App {
     width: 100%;
+    min-height: 100vh;
     height: fit-content;
     margin: 0;
     padding: 0;
@@ -12,6 +13,11 @@ html, body, #root, .App {
     background-attachment: fixed;
 
 }
+.content{
+    min-height: inherit;
+}
+
+
 .content >div {
     color: #0c5460;
     display: flex;
