@@ -4,6 +4,22 @@ networks:
   nginx-php74-node:
 
 services:
+  postgres12-service:
+    container_name: postgres-container
+    image: postgres:12.4-alpine
+    restart: on-failure
+    volumes:
+    - ./postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: educamp
+      POSTGRES_USER: sf_user
+      POSTGRES_PASSWORD: random_password
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    networks:
+      - nginx-php74-node
 
   #nginx
   nginx-service:
@@ -27,6 +43,8 @@ services:
     container_name: php74-container
     ports:
       - "9000:9000"
+    depends_on:
+      - postgres12-service
     volumes:
       - ./app:/var/www/project
     networks:

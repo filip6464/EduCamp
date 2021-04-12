@@ -1,5 +1,12 @@
 
-FROM php:7.4-fpm
+FROM php:8.0-fpm
+
+#install postgre driver
+#https://stackoverflow.com/questions/44983961/installing-postgres-driver-in-php7-fpm-docker-container
+RUN apt-get update && apt-get install -y libpq-dev
+RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql
+RUN docker-php-ext-install pdo pdo_pgsql
+
 
 RUN apt-get update && apt-get install -y zlib1g-dev g++ git libicu-dev zip libzip-dev zip \
     && docker-php-ext-install intl opcache pdo \
