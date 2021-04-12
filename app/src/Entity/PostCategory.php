@@ -6,11 +6,12 @@ use App\Repository\PostCategoryRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use JsonSerializable;
 
 /**
  * @ORM\Entity(repositoryClass=PostCategoryRepository::class)
  */
-class PostCategory
+class PostCategory implements JsonSerializable
 {
     /**
      * @ORM\Id
@@ -79,5 +80,10 @@ class PostCategory
         }
 
         return $this;
+    }
+
+    public function jsonSerialize()
+    {
+        return (object) get_object_vars($this);
     }
 }

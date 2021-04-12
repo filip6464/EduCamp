@@ -31,8 +31,9 @@ const useStyles = makeStyles({
     },
 });
 
-export default function MediaCard() {
+export default function MediaCard(props) {
     const classes = useStyles();
+
 
     return (
         <Card className={classes.root}>
@@ -44,10 +45,10 @@ export default function MediaCard() {
                 />
                 <CardContent className={classes.content}>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Multiplying in range 100
+                        {props.title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Some example text to show description of the homework.
+                        {props.description}
                     </Typography>
                 </CardContent>
             </CardActionArea>

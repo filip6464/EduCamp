@@ -4,11 +4,12 @@ namespace App\Entity;
 
 use App\Repository\PostTypeRepository;
 use Doctrine\ORM\Mapping as ORM;
+use JsonSerializable;
 
 /**
  * @ORM\Entity(repositoryClass=PostTypeRepository::class)
  */
-class PostType
+class PostType implements JsonSerializable
 {
     /**
      * @ORM\Id
@@ -37,5 +38,10 @@ class PostType
         $this->type = $type;
 
         return $this;
+    }
+
+    public function jsonSerialize()
+    {
+        return (object) get_object_vars($this);
     }
 }
