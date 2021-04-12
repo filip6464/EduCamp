@@ -15,16 +15,15 @@ const StyledPaper = withStyles({
     },
 })(Paper);
 
+
 class PostsContainer extends Component {
+
+
     render() {
         return (
             <StyledPaper>
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
+                <Post title="Example1" description="Description of first post"/>
+                <Post title="Example2" description="Description of second post"/>
             </StyledPaper>
         );
     }
