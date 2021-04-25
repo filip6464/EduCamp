@@ -2,11 +2,13 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\PostTypeRepository;
 use Doctrine\ORM\Mapping as ORM;
 use JsonSerializable;
 
 /**
+ * @ApiResource
  * @ORM\Entity(repositoryClass=PostTypeRepository::class)
  */
 class PostType implements JsonSerializable
