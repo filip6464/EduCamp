@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Post from "./Post";
 import {withStyles} from "@material-ui/styles";
 import {makeStyles, Paper} from "@material-ui/core";
+import axios from "axios";
 
 const StyledPaper = withStyles({
     root: {
@@ -18,12 +19,23 @@ const StyledPaper = withStyles({
 
 class PostsContainer extends Component {
 
+    state = {
+        posts: []
+    }
+
+    GetPosts() {
+        axios.get(`http://localhost:8080/api/posts.json`)
+            .then(res => {
+                const posts = res.data;
+                this.setState({ posts });
+            })
+    }
 
     render() {
+        this.GetPosts();
         return (
             <StyledPaper>
-                <Post title="Example1" description="Description of first post"/>
-                <Post title="Example2" description="Description of second post"/>
+                { this.state.posts.map(post => <Post title={post.title} description={post.description}/>)}
             </StyledPaper>
         );
     }
