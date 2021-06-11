@@ -12,7 +12,7 @@ import './styles/app.css';
 import './bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import {
     BrowserRouter as Router,
@@ -33,7 +33,7 @@ import ManageHomeworks from "./pages/admin/ManageHomeworks";
 
 
 function App(){
-
+    const [token, setToken] = useState();
     return (
           <div className="App" style={{ backgroundImage: `url(${background})` }}>
               <Router>
