@@ -3,7 +3,7 @@
 Prosty CMS dla nauczycieli nauczania wczesnoszkolnego do udostępniania interaktywnych prac domowych oraz ogłoszeń dla rodziców. 
 
 ## ERD
-<div style="text-align:center"><img src=https://raw.githubusercontent.com/filip6464/EduCamp/master/ERD%20Educamp.png/></div>
+<div style="text-align:center"><img src=https://raw.githubusercontent.com/filip6464/EduCamp/master/ERD%20Educamp.png /></div>
 
 ## Plan Sprintów
 
