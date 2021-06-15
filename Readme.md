@@ -8,6 +8,10 @@ Prosty CMS dla nauczycieli nauczania wczesnoszkolnego do udostępniania interakt
 ## ERD
 <div style="text-align:center"><img src=https://raw.githubusercontent.com/filip6464/EduCamp/master/ERD%20Educamp.png /></div>
 
+
+## Technologie
+PHP, ReactJS, Symfony, Material UI, Docker, PostgreSQL
+
 ## Plan Sprintów
 
 Numer laboratorium | Data | Postęp w projekcie 
